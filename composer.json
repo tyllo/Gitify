@@ -1,8 +1,8 @@
 {
     "name": "modmore/Gitify",
-    "version": "0.10.2",
-    "description": "Command line toolkit to make managing a MODX site in git a lot easier",
+    "version":"0.10.2",
     "require": {
+        "php":">=5.4.0",
         "kbjr/Git.php": "*",
         "symfony/console": "2.6.*",
         "symfony/yaml": "2.6.*",
