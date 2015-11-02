@@ -134,7 +134,7 @@ class InstallModxCommand extends BaseCommand
         if ( !isset($defaultMgrUser) ) {
             $defaultMgrUser = basename(GITIFY_WORKING_DIR) . '_admin';
             $question = new Question('Manager User [' . $defaultMgrUser . ']: ', $defaultMgrUser);
-            $managerUser = $helper->ask($this->input, $this->output, $question);
+            $defaultMgrUser = $helper->ask($this->input, $this->output, $question);
         }
 
         if ( !isset($managerPass) ) {
@@ -178,7 +178,7 @@ class InstallModxCommand extends BaseCommand
             <inplace>1</inplace>
             <unpacked>0</unpacked>
             <language>{$language}</language>
-            <cmsadmin>{$managerUser}</cmsadmin>
+            <cmsadmin>{$defaultMgrUser}</cmsadmin>
             <cmspassword>{$managerPass}</cmspassword>
             <cmsadminemail>{$managerEmail}</cmsadminemail>
             <core_path>{$directory}core/</core_path>
